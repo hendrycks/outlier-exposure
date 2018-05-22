@@ -2,7 +2,7 @@
 
 This repository contains the essential code for the paper _Deep Anomaly Detection with Outlier Exposure_ (see paper.pdf).
 
-Code requires Python 3+ and PyTorch 0.3+.
+Requires Python 3+ and PyTorch 0.3+.
 
 <img align="center" src="roc_curves.png" width="750">
 
