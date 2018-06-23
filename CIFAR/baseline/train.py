@@ -63,11 +63,11 @@ train_transform = trn.Compose([trn.RandomHorizontalFlip(), trn.RandomCrop(32, pa
 test_transform = trn.Compose([trn.ToTensor(), trn.Normalize(mean, std)])
 
 if args.dataset == 'cifar10':
-    train_data = dset.CIFAR10('/share/data/vision-greg/cifarpy', train=True, transform=test_transform, download=False)
+    train_data = dset.CIFAR10('/share/data/vision-greg/cifarpy', train=True, transform=train_transform, download=False)
     test_data = dset.CIFAR10('/share/data/vision-greg/cifarpy', train=False, transform=test_transform, download=False)
     num_classes = 10
 else:
-    train_data = dset.CIFAR100('/share/data/vision-greg/cifarpy', train=True, transform=test_transform, download=False)
+    train_data = dset.CIFAR100('/share/data/vision-greg/cifarpy', train=True, transform=train_transform, download=False)
     test_data = dset.CIFAR100('/share/data/vision-greg/cifarpy', train=False, transform=test_transform, download=False)
     num_classes = 100
 
