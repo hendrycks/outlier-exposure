@@ -1,0 +1,81 @@
+Model restored! Epoch: 19
+Error Rate 1.73
+
+Using SVHN as typical data
+
+
+Error Detection
+			wrn_baseline
+FPR95:			54.62
+AUROC:			91.15
+AUPR:			39.38
+
+
+Gaussian Noise (mu = sigma = 0.5) Detection
+				wrn_baseline
+FPR95:			5.41	+/- 0.22
+AUROC: 			98.24	+/- 0.07
+AUPR:  			90.44	+/- 0.18
+
+
+Bernoulli Noise Detection
+				wrn_baseline
+FPR95:			4.44	+/- 0.06
+AUROC: 			98.56	+/- 0.04
+AUPR:  			91.87	+/- 0.09
+
+
+Blob Detection
+				wrn_baseline
+FPR95:			3.69	+/- 0.07
+AUROC: 			98.90	+/- 0.02
+AUPR:  			93.51	+/- 0.07
+
+
+Icons-50 Detection
+				wrn_baseline
+FPR95:			11.40	+/- 0.98
+AUROC: 			96.43	+/- 0.15
+AUPR:  			87.17	+/- 0.26
+
+
+Texture Detection
+				wrn_baseline
+FPR95:			7.16	+/- 0.11
+AUROC: 			97.48	+/- 0.04
+AUPR:  			90.91	+/- 0.08
+
+
+Places365 Detection
+				wrn_baseline
+FPR95:			5.61	+/- 0.19
+AUROC: 			98.16	+/- 0.06
+AUPR:  			92.53	+/- 0.13
+
+
+LSUN Detection
+				wrn_baseline
+FPR95:			6.38	+/- 0.10
+AUROC: 			97.84	+/- 0.06
+AUPR:  			90.96	+/- 0.13
+
+
+CIFAR-10 Detection
+				wrn_baseline
+FPR95:			6.01	+/- 0.15
+AUROC: 			98.04	+/- 0.04
+AUPR:  			91.18	+/- 0.14
+
+
+Street View Characters Detection
+				wrn_baseline
+FPR95:			6.39	+/- 0.25
+AUROC: 			97.86	+/- 0.11
+AUPR:  			91.49	+/- 0.15
+
+
+Mean Test Results
+				wrn_baseline
+FPR95:			6.28
+AUROC: 			97.95
+AUPR:  			91.12

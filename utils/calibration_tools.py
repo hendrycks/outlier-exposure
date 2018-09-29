@@ -1,11 +1,7 @@
 import numpy as np
-import cvxpy as cx
-import torch
-import torch.nn.functional as F
-from torch.autograd import Variable as V
 
 
-def rms_calib_err(confidence, correct, p='2', beta=100):
+def calib_err(confidence, correct, p='2', beta=100):
     # beta is target bin size
     idxs = np.argsort(confidence)
     confidence = confidence[idxs]
@@ -41,45 +37,82 @@ def rms_calib_err(confidence, correct, p='2', beta=100):
 def soft_f1(confidence, correct):
     wrong = 1 - correct
 
-    # the incorrectly classified samples are our interest
-    # so they make the positive class
-    tp_soft = np.sum((1 - confidence) * wrong)
-    fp_soft = np.sum((1 - confidence) * correct)
-    fn_soft = np.sum(confidence * wrong)
+    # # the incorrectly classified samples are our interest
+    # # so they make the positive class
+    # tp_soft = np.sum((1 - confidence) * wrong)
+    # fp_soft = np.sum((1 - confidence) * correct)
+    # fn_soft = np.sum(confidence * wrong)
 
-    return 2 * tp_soft / (2 * tp_soft + fn_soft + fp_soft)
+    # return 2 * tp_soft / (2 * tp_soft + fn_soft + fp_soft)
+    return 2 * ((1 - confidence) * wrong).sum()/(1 - confidence + wrong).sum()
 
 
-def tune_temp(logits, labels, correct):
+def tune_temp(logits, labels, grid_search=True, lower=0.7, upper=2.0, grid_step=0.0001):
     logits = np.array(logits)
-    set_size = np.array(logits).shape[0]
+    
+    if grid_search:
+        import torch
+        import torch.nn.functional as F
 
-    t = cx.Variable()
+        best_loss = float('inf')
+        t = lower
+        logits = torch.FloatTensor(logits)
+        labels = torch.LongTensor(labels)
+        for temp in np.arange(lower, upper, grid_step):
+            loss = float(F.cross_entropy(logits / temp, labels))
+            if loss < best_loss:
+                best_loss = loss
+                t = temp
+    else:
+        import cvxpy as cx
 
-    expr = sum([cx.Minimize(cx.log_sum_exp(logits[i, :] * t) - logits[i, labels[i]] * t)
-                for i in range(set_size)])
-    p = cx.Problem(expr, [0.25 <= t, t <= 4])
-    p.solve()
+        set_size = np.array(logits).shape[0]
 
-    t = 1 / t.value
+        t = cx.Variable()
+
+        expr = sum((cx.Minimize(cx.log_sum_exp(logits[i, :] * t) - logits[i, labels[i]] * t)
+                    for i in range(set_size)))
+        p = cx.Problem(expr, [lower <= t, t <= upper])
+
+        p.solve()   # p.solve(solver=cx.SCS)
+        t = 1 / t.value
 
     return t
 
 
-arr = lambda x: np.array(x)
+def get_measures(confidence, correct):
+    rms = calib_err(confidence, correct, p='2')
+    mad = calib_err(confidence, correct, p='1')
+    sf1 = soft_f1(confidence, correct)
+
+    return rms, mad, sf1
+
+
+def print_measures(rms, mad, sf1, method_name='Baseline'):
+    print('\t\t\t\t\t\t\t' + method_name)
+    print('RMS Calib Error (%): \t\t{:.2f}'.format(100 * rms))
+    print('MAD Calib Error (%): \t\t{:.2f}'.format(100 * mad))
+    print('Soft F1 Score (%):   \t\t{:.2f}'.format(100 * sf1))
+
+
+def print_measures_with_std(rmss, mads, sf1s, method_name='Baseline'):
+    print('\t\t\t\t\t\t\t' + method_name)
+    print('RMS Calib Error (%): \t\t{:.2f}\t+/- {:.2f}'.format(100 * np.mean(rmss), 100 * np.std(rmss)))
+    print('MAD Calib Error (%): \t\t{:.2f}\t+/- {:.2f}'.format(100 * np.mean(mads), 100 * np.std(mads)))
+    print('Soft F1 Score (%):   \t\t{:.2f}\t+/- {:.2f}'.format(100 * np.mean(sf1s), 100 * np.std(sf1s)))
 
 
 def show_calibration_results(confidence, correct, method_name='Baseline'):
 
     print('\t\t\t\t' + method_name)
     print('RMS Calib Error (%): \t\t{:.2f}'.format(
-        100 * rms_calib_err(confidence, correct, p='2')))
+        100 * calib_err(confidence, correct, p='2')))
 
-    print('MAV Calib Error (%): \t\t{:.2f}'.format(
-        100 * rms_calib_err(confidence, correct, p='1')))
+    print('MAD Calib Error (%): \t\t{:.2f}'.format(
+        100 * calib_err(confidence, correct, p='1')))
 
     # print('Max Calib Error (%): \t\t{:.2f}'.format(
-    #     100 * rms_calib_err(confidence, correct, p='infty')))
+    #     100 * calib_err(confidence, correct, p='infty')))
 
     print('Soft F1-Score (%): \t\t{:.2f}'.format(
         100 * soft_f1(confidence, correct)))

@@ -52,31 +52,31 @@ class SVHN(data.Dataset):
         loaded_mat = sio.loadmat(os.path.join(root, self.filename))
 
         if self.split == "test":
-            self.test_data = loaded_mat['X']
-            self.test_labels = loaded_mat['y']
+            self.data = loaded_mat['X']
+            self.targets = loaded_mat['y']
             # Note label 10 == 0 so modulo operator required
-            self.test_labels %= 10    # convert to zero-based indexing
-            self.test_data = np.transpose(self.test_data, (3, 2, 0, 1))
+            self.targets = (self.targets % 10).squeeze()    # convert to zero-based indexing
+            self.data = np.transpose(self.data, (3, 2, 0, 1))
         else:
-            self.train_data = loaded_mat['X']
-            self.train_labels = loaded_mat['y']
+            self.data = loaded_mat['X']
+            self.targets = loaded_mat['y']
 
             if self.split == "train_and_extra":
                 extra_filename = self.split_list[split][1][1]
                 loaded_mat = sio.loadmat(os.path.join(root, extra_filename))
-                self.train_data = np.concatenate([self.train_data,
+                self.data = np.concatenate([self.data,
                                                   loaded_mat['X']], axis=3)
-                self.train_labels = np.vstack((self.train_labels,
+                self.targets = np.vstack((self.targets,
                                                loaded_mat['y']))
             # Note label 10 == 0 so modulo operator required
-            self.train_labels %= 10    # convert to zero-based indexing
-            self.train_data = np.transpose(self.train_data, (3, 2, 0, 1))
+            self.targets = (self.targets % 10).squeeze()    # convert to zero-based indexing
+            self.data = np.transpose(self.data, (3, 2, 0, 1))
 
     def __getitem__(self, index):
         if self.split == "test":
-            img, target = self.test_data[index], self.test_labels[index]
+            img, target = self.data[index], self.targets[index]
         else:
-            img, target = self.train_data[index], self.train_labels[index]
+            img, target = self.data[index], self.targets[index]
 
         # doing this so that it is consistent with all other datasets
         # to return a PIL Image
@@ -92,9 +92,9 @@ class SVHN(data.Dataset):
 
     def __len__(self):
         if self.split == "test":
-            return len(self.test_data)
+            return len(self.data)
         else:
-            return len(self.train_data)
+            return len(self.data)
 
     def _check_integrity(self):
         root = self.root

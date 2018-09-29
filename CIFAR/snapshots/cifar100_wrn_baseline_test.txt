@@ -1,0 +1,74 @@
+Model restored! Epoch: 99
+Error Rate 24.04
+
+Using CIFAR-100 as typical data
+
+
+Error Detection
+			cifar100_wrn_baseline
+FPR95:			43.54
+AUROC:			86.80
+AUPR:			64.94
+
+
+Gaussian Noise (sigma = 0.5) Detection
+				cifar100_wrn_baseline
+FPR95:			54.27	+/- 0.45
+AUROC: 			64.67	+/- 0.30
+AUPR:  			19.70	+/- 0.13
+
+
+Rademacher Noise Detection
+				cifar100_wrn_baseline
+FPR95:			38.98	+/- 0.48
+AUROC: 			79.37	+/- 0.17
+AUPR:  			30.13	+/- 0.21
+
+
+Blob Detection
+				cifar100_wrn_baseline
+FPR95:			58.01	+/- 0.61
+AUROC: 			75.29	+/- 0.26
+AUPR:  			29.69	+/- 0.30
+
+
+Texture Detection
+				cifar100_wrn_baseline
+FPR95:			71.46	+/- 1.61
+AUROC: 			73.81	+/- 0.46
+AUPR:  			33.33	+/- 0.56
+
+
+SVHN Detection
+				cifar100_wrn_baseline
+FPR95:			69.28	+/- 0.39
+AUROC: 			71.40	+/- 0.36
+AUPR:  			30.69	+/- 0.48
+
+
+Places365 Detection
+				cifar100_wrn_baseline
+FPR95:			70.39	+/- 1.38
+AUROC: 			74.23	+/- 0.52
+AUPR:  			33.75	+/- 0.53
+
+
+LSUN Detection
+				cifar100_wrn_baseline
+FPR95:			73.99	+/- 1.36
+AUROC: 			70.73	+/- 0.46
+AUPR:  			28.82	+/- 0.65
+
+
+CIFAR-100 Detection
+				cifar100_wrn_baseline
+FPR95:			64.87	+/- 1.10
+AUROC: 			75.41	+/- 0.28
+AUPR:  			34.28	+/- 0.33
+
+
+Mean Test Results
+				cifar100_wrn_baseline
+FPR95:			62.66
+AUROC: 			73.11
+AUPR:  			30.05

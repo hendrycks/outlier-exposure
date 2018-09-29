@@ -1,0 +1,84 @@
+Model restored! Epoch: 19
+
+Tuning Softmax Temperature
+Softmax Temperature Tuned. Temperature is 1.023
+Error Rate 1.74
+
+Using SVHN as typical data
+
+
+In-Distribution Data
+				calib_wrn_baseline
+RMS Calib Error (%): 		1.68
+MAD Calib Error (%): 		0.73
+Soft F1-Score (%): 		27.32
+
+
+Gaussian Noise (mu = sigma = 0.5) Calibration
+							calib_wrn_baseline
+RMS Calib Error (%): 		23.94	+/- 0.11
+MAD Calib Error (%): 		11.72	+/- 0.06
+Soft F1 Score (%):   		47.29	+/- 0.35
+
+
+Bernoulli Noise Calibration
+							calib_wrn_baseline
+RMS Calib Error (%): 		24.50	+/- 0.11
+MAD Calib Error (%): 		11.97	+/- 0.05
+Soft F1 Score (%):   		45.74	+/- 0.32
+
+
+Blob Calibration
+							calib_wrn_baseline
+RMS Calib Error (%): 		22.21	+/- 0.08
+MAD Calib Error (%): 		10.52	+/- 0.04
+Soft F1 Score (%):   		54.53	+/- 0.22
+
+
+Icons-50 Calibration
+							calib_wrn_baseline
+RMS Calib Error (%): 		22.64	+/- 0.07
+MAD Calib Error (%): 		11.47	+/- 0.04
+Soft F1 Score (%):   		48.61	+/- 0.22
+
+
+Texture Calibration
+							calib_wrn_baseline
+RMS Calib Error (%): 		20.84	+/- 0.02
+MAD Calib Error (%): 		10.18	+/- 0.01
+Soft F1 Score (%):   		56.21	+/- 0.06
+
+
+Places365 Calibration
+							calib_wrn_baseline
+RMS Calib Error (%): 		20.95	+/- 0.05
+MAD Calib Error (%): 		10.18	+/- 0.02
+Soft F1 Score (%):   		56.29	+/- 0.14
+
+
+LSUN Calibration
+							calib_wrn_baseline
+RMS Calib Error (%): 		21.74	+/- 0.07
+MAD Calib Error (%): 		10.71	+/- 0.03
+Soft F1 Score (%):   		53.28	+/- 0.14
+
+
+CIFAR-10 Calibration
+							calib_wrn_baseline
+RMS Calib Error (%): 		22.19	+/- 0.09
+MAD Calib Error (%): 		10.83	+/- 0.03
+Soft F1 Score (%):   		52.61	+/- 0.17
+
+
+Street View Characters Calibration
+							calib_wrn_baseline
+RMS Calib Error (%): 		21.40	+/- 0.05
+MAD Calib Error (%): 		10.49	+/- 0.05
+Soft F1 Score (%):   		54.54	+/- 0.29
+
+
+Mean Test Results
+							calib_wrn_baseline
+RMS Calib Error (%): 		22.27
+MAD Calib Error (%): 		10.90
+Soft F1 Score (%):   		52.12

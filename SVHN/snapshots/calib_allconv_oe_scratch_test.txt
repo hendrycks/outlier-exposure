@@ -1,0 +1,84 @@
+Model restored! Epoch: 19
+
+Tuning Softmax Temperature
+Softmax Temperature Tuned. Temperature is 1.079
+Error Rate 2.02
+
+Using SVHN as typical data
+
+
+In-Distribution Data
+				calib_allconv_oe_scratch
+RMS Calib Error (%): 		1.13
+MAD Calib Error (%): 		0.58
+Soft F1-Score (%): 		32.04
+
+
+Gaussian Noise (mu = sigma = 0.5) Calibration
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.47	+/- 0.00
+MAD Calib Error (%): 		2.26	+/- 0.00
+Soft F1 Score (%):   		88.37	+/- 0.00
+
+
+Bernoulli Noise Calibration
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.64	+/- 0.00
+MAD Calib Error (%): 		2.33	+/- 0.00
+Soft F1 Score (%):   		88.14	+/- 0.00
+
+
+Blob Calibration
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.37	+/- 0.00
+MAD Calib Error (%): 		2.22	+/- 0.00
+Soft F1 Score (%):   		88.51	+/- 0.00
+
+
+Icons-50 Calibration
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.50	+/- 0.01
+MAD Calib Error (%): 		2.28	+/- 0.02
+Soft F1 Score (%):   		87.58	+/- 0.05
+
+
+Texture Calibration
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.54	+/- 0.01
+MAD Calib Error (%): 		2.29	+/- 0.01
+Soft F1 Score (%):   		88.01	+/- 0.01
+
+
+Places365 Calibration
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.39	+/- 0.00
+MAD Calib Error (%): 		2.22	+/- 0.00
+Soft F1 Score (%):   		88.47	+/- 0.00
+
+
+LSUN Calibration
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.38	+/- 0.00
+MAD Calib Error (%): 		2.22	+/- 0.00
+Soft F1 Score (%):   		88.48	+/- 0.00
+
+
+CIFAR-10 Calibration
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.39	+/- 0.00
+MAD Calib Error (%): 		2.24	+/- 0.00
+Soft F1 Score (%):   		88.42	+/- 0.00
+
+
+Street View Characters Calibration
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.37	+/- 0.00
+MAD Calib Error (%): 		2.22	+/- 0.00
+Soft F1 Score (%):   		88.43	+/- 0.01
+
+
+Mean Test Results
+							calib_allconv_oe_scratch
+RMS Calib Error (%): 		4.45
+MAD Calib Error (%): 		2.25
+Soft F1 Score (%):   		88.27

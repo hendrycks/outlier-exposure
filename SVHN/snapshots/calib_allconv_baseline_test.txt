@@ -1,0 +1,84 @@
+Model restored! Epoch: 19
+
+Tuning Softmax Temperature
+Softmax Temperature Tuned. Temperature is 1.000
+Error Rate 1.99
+
+Using SVHN as typical data
+
+
+In-Distribution Data
+				calib_allconv_baseline
+RMS Calib Error (%): 		1.35
+MAD Calib Error (%): 		0.62
+Soft F1-Score (%): 		29.66
+
+
+Gaussian Noise (mu = sigma = 0.5) Calibration
+							calib_allconv_baseline
+RMS Calib Error (%): 		18.35	+/- 0.09
+MAD Calib Error (%): 		8.73	+/- 0.04
+Soft F1 Score (%):   		61.78	+/- 0.22
+
+
+Bernoulli Noise Calibration
+							calib_allconv_baseline
+RMS Calib Error (%): 		18.88	+/- 0.05
+MAD Calib Error (%): 		8.94	+/- 0.03
+Soft F1 Score (%):   		60.76	+/- 0.15
+
+
+Blob Calibration
+							calib_allconv_baseline
+RMS Calib Error (%): 		15.85	+/- 0.09
+MAD Calib Error (%): 		7.39	+/- 0.04
+Soft F1 Score (%):   		68.19	+/- 0.19
+
+
+Icons-50 Calibration
+							calib_allconv_baseline
+RMS Calib Error (%): 		19.84	+/- 0.05
+MAD Calib Error (%): 		10.49	+/- 0.03
+Soft F1 Score (%):   		52.04	+/- 0.20
+
+
+Texture Calibration
+							calib_allconv_baseline
+RMS Calib Error (%): 		17.79	+/- 0.02
+MAD Calib Error (%): 		9.05	+/- 0.02
+Soft F1 Score (%):   		59.84	+/- 0.08
+
+
+Places365 Calibration
+							calib_allconv_baseline
+RMS Calib Error (%): 		17.36	+/- 0.06
+MAD Calib Error (%): 		8.41	+/- 0.03
+Soft F1 Score (%):   		63.17	+/- 0.12
+
+
+LSUN Calibration
+							calib_allconv_baseline
+RMS Calib Error (%): 		18.25	+/- 0.06
+MAD Calib Error (%): 		8.98	+/- 0.03
+Soft F1 Score (%):   		60.35	+/- 0.15
+
+
+CIFAR-10 Calibration
+							calib_allconv_baseline
+RMS Calib Error (%): 		18.63	+/- 0.10
+MAD Calib Error (%): 		9.18	+/- 0.04
+Soft F1 Score (%):   		59.36	+/- 0.20
+
+
+Street View Characters Calibration
+							calib_allconv_baseline
+RMS Calib Error (%): 		17.79	+/- 0.11
+MAD Calib Error (%): 		8.72	+/- 0.03
+Soft F1 Score (%):   		61.65	+/- 0.18
+
+
+Mean Test Results
+							calib_allconv_baseline
+RMS Calib Error (%): 		18.08
+MAD Calib Error (%): 		8.88
+Soft F1 Score (%):   		60.79

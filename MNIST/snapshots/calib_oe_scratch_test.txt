@@ -1,0 +1,77 @@
+Model restored! Epoch: 9
+
+Tuning Softmax Temperature
+Softmax Temperature Tuned. Temperature is 1.100
+Error Rate 1.17
+
+Using MNIST as typical data
+
+
+In-Distribution Data
+				calib_oe_scratch
+RMS Calib Error (%): 		0.81
+MAD Calib Error (%): 		0.23
+Soft F1-Score (%): 		27.36
+
+
+Gaussian Noise (mu = sigma = 0.5) Calibration
+							calib_oe_scratch
+RMS Calib Error (%): 		5.00	+/- 0.00
+MAD Calib Error (%): 		2.21	+/- 0.00
+Soft F1 Score (%):   		89.40	+/- 0.01
+
+
+Bernoulli Noise Calibration
+							calib_oe_scratch
+RMS Calib Error (%): 		5.30	+/- 0.01
+MAD Calib Error (%): 		2.32	+/- 0.00
+Soft F1 Score (%):   		89.01	+/- 0.01
+
+
+CIFAR-10 Calibration
+							calib_oe_scratch
+RMS Calib Error (%): 		5.08	+/- 0.01
+MAD Calib Error (%): 		2.23	+/- 0.00
+Soft F1 Score (%):   		89.31	+/- 0.01
+
+
+Icons-50 Calibration
+							calib_oe_scratch
+RMS Calib Error (%): 		4.75	+/- 0.02
+MAD Calib Error (%): 		2.09	+/- 0.02
+Soft F1 Score (%):   		89.50	+/- 0.05
+
+
+Fashion-MNIST Calibration
+							calib_oe_scratch
+RMS Calib Error (%): 		8.79	+/- 0.09
+MAD Calib Error (%): 		3.70	+/- 0.05
+Soft F1 Score (%):   		83.55	+/- 0.19
+
+
+Negative MNIST Calibration
+							calib_oe_scratch
+RMS Calib Error (%): 		8.31	+/- 0.09
+MAD Calib Error (%): 		3.47	+/- 0.05
+Soft F1 Score (%):   		84.68	+/- 0.10
+
+
+notMNIST Calibration
+							calib_oe_scratch
+RMS Calib Error (%): 		16.71	+/- 0.26
+MAD Calib Error (%): 		8.16	+/- 0.12
+Soft F1 Score (%):   		63.79	+/- 0.62
+
+
+Omniglot Calibration
+							calib_oe_scratch
+RMS Calib Error (%): 		22.04	+/- 0.11
+MAD Calib Error (%): 		11.69	+/- 0.07
+Soft F1 Score (%):   		43.39	+/- 0.49
+
+
+Mean Test Results
+							calib_oe_scratch
+RMS Calib Error (%): 		9.50
+MAD Calib Error (%): 		4.49
+Soft F1 Score (%):   		79.08

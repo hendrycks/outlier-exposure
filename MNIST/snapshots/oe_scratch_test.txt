@@ -1,0 +1,74 @@
+Model restored! Epoch: 9
+Error Rate 1.03
+
+Using MNIST as typical data
+
+
+Error Detection
+			oe_scratch
+FPR95:			8.04
+AUROC:			98.07
+AUPR:			38.35
+
+
+Gaussian Noise (mu = sigma = 0.5) Detection
+				oe_scratch
+FPR95:			0.00	+/- 0.00
+AUROC: 			100.00	+/- 0.00
+AUPR:  			100.00	+/- 0.00
+
+
+Bernoulli Noise Detection
+				oe_scratch
+FPR95:			0.00	+/- 0.00
+AUROC: 			100.00	+/- 0.00
+AUPR:  			100.00	+/- 0.00
+
+
+CIFAR-10 Detection
+				oe_scratch
+FPR95:			0.00	+/- 0.00
+AUROC: 			100.00	+/- 0.00
+AUPR:  			100.00	+/- 0.00
+
+
+Icons-50 Detection
+				oe_scratch
+FPR95:			0.00	+/- 0.00
+AUROC: 			99.98	+/- 0.01
+AUPR:  			99.93	+/- 0.02
+
+
+Fashion-MNIST Detection
+				oe_scratch
+FPR95:			0.38	+/- 0.07
+AUROC: 			99.92	+/- 0.01
+AUPR:  			99.61	+/- 0.04
+
+
+Negative MNIST Detection
+				oe_scratch
+FPR95:			0.18	+/- 0.05
+AUROC: 			99.95	+/- 0.00
+AUPR:  			99.76	+/- 0.02
+
+
+notMNIST Detection
+				oe_scratch
+FPR95:			6.44	+/- 0.32
+AUROC: 			98.60	+/- 0.07
+AUPR:  			94.22	+/- 0.18
+
+
+Omniglot Detection
+				oe_scratch
+FPR95:			16.48	+/- 0.68
+AUROC: 			95.86	+/- 0.12
+AUPR:  			82.44	+/- 0.39
+
+
+Mean Test Results
+				oe_scratch
+FPR95:			2.93
+AUROC: 			99.29
+AUPR:  			97.00

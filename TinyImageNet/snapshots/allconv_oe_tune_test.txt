@@ -1,0 +1,74 @@
+Model restored! Epoch: 9
+Error Rate 43.58
+
+Using TinyImageNet as typical data
+
+
+Error Detection
+			allconv_oe_tune
+FPR95:			52.57
+AUROC:			82.74
+AUPR:			74.91
+
+
+Gaussian Noise (sigma = 0.5) Detection
+				allconv_oe_tune
+FPR95:			79.82	+/- 0.14
+AUROC: 			27.02	+/- 0.10
+AUPR:  			11.35	+/- 0.01
+
+
+Rademacher Noise Detection
+				allconv_oe_tune
+FPR95:			68.26	+/- 0.38
+AUROC: 			45.10	+/- 0.21
+AUPR:  			14.02	+/- 0.04
+
+
+Blob Detection
+				allconv_oe_tune
+FPR95:			0.00	+/- 0.00
+AUROC: 			100.00	+/- 0.00
+AUPR:  			100.00	+/- 0.00
+
+
+Texture Detection
+				allconv_oe_tune
+FPR95:			20.39	+/- 1.78
+AUROC: 			97.20	+/- 0.23
+AUPR:  			93.95	+/- 0.38
+
+
+SVHN Detection
+				allconv_oe_tune
+FPR95:			0.41	+/- 0.08
+AUROC: 			99.60	+/- 0.06
+AUPR:  			98.97	+/- 0.11
+
+
+Places365 Detection
+				allconv_oe_tune
+FPR95:			0.12	+/- 0.02
+AUROC: 			99.87	+/- 0.03
+AUPR:  			99.61	+/- 0.07
+
+
+LSUN Detection
+				allconv_oe_tune
+FPR95:			0.09	+/- 0.01
+AUROC: 			99.85	+/- 0.04
+AUPR:  			99.59	+/- 0.09
+
+
+Held-out ImageNet Classes Detection
+				allconv_oe_tune
+FPR95:			30.91	+/- 1.60
+AUROC: 			94.59	+/- 0.26
+AUPR:  			84.48	+/- 0.51
+
+
+Mean Test Results
+				allconv_oe_tune
+FPR95:			25.00
+AUROC: 			82.90
+AUPR:  			75.25

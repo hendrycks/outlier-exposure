@@ -1,0 +1,77 @@
+Model restored! Epoch: 9
+
+Tuning Softmax Temperature
+Softmax Temperature Tuned. Temperature is 0.793
+Error Rate 6.74
+
+Using CIFAR-10 as typical data
+
+
+In-Distribution Data
+				cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		3.07
+MAD Calib Error (%): 		1.65
+Soft F1-Score (%): 		36.20
+
+
+Gaussian Noise (sigma = 0.5) Calibration
+							cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		5.38	+/- 0.00
+MAD Calib Error (%): 		3.25	+/- 0.00
+Soft F1 Score (%):   		79.01	+/- 0.01
+
+
+Rademacher Noise Calibration
+							cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		5.46	+/- 0.01
+MAD Calib Error (%): 		3.29	+/- 0.00
+Soft F1 Score (%):   		78.90	+/- 0.01
+
+
+Blob Calibration
+							cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		13.90	+/- 0.14
+MAD Calib Error (%): 		8.48	+/- 0.09
+Soft F1 Score (%):   		57.76	+/- 0.35
+
+
+Texture Calibration
+							cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		8.93	+/- 0.11
+MAD Calib Error (%): 		5.90	+/- 0.10
+Soft F1 Score (%):   		67.21	+/- 0.35
+
+
+SVHN Calibration
+							cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		8.51	+/- 0.11
+MAD Calib Error (%): 		5.15	+/- 0.08
+Soft F1 Score (%):   		69.79	+/- 0.27
+
+
+Places365 Calibration
+							cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		11.58	+/- 0.14
+MAD Calib Error (%): 		7.86	+/- 0.11
+Soft F1 Score (%):   		60.13	+/- 0.42
+
+
+LSUN Calibration
+							cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		11.68	+/- 0.09
+MAD Calib Error (%): 		7.56	+/- 0.07
+Soft F1 Score (%):   		61.28	+/- 0.27
+
+
+CIFAR-10 Detection
+							cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		13.31	+/- 0.15
+MAD Calib Error (%): 		9.22	+/- 0.09
+Soft F1 Score (%):   		54.73	+/- 0.38
+
+
+Mean Test Results
+							cifar10_calib_allconv_oe_tune
+RMS Calib Error (%): 		9.84
+MAD Calib Error (%): 		6.34
+Soft F1 Score (%):   		66.10

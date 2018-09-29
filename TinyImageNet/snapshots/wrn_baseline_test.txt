@@ -1,0 +1,74 @@
+Model restored! Epoch: 99
+Error Rate 36.34
+
+Using TinyImageNet as typical data
+
+
+Error Detection
+			wrn_baseline
+FPR95:			47.00
+AUROC:			85.67
+AUPR:			74.61
+
+
+Gaussian Noise (sigma = 0.5) Detection
+				wrn_baseline
+FPR95:			72.55	+/- 0.12
+AUROC: 			33.65	+/- 0.07
+AUPR:  			12.31	+/- 0.01
+
+
+Rademacher Noise Detection
+				wrn_baseline
+FPR95:			51.66	+/- 0.14
+AUROC: 			62.02	+/- 0.16
+AUPR:  			18.82	+/- 0.06
+
+
+Blob Detection
+				wrn_baseline
+FPR95:			79.38	+/- 0.29
+AUROC: 			48.17	+/- 0.33
+AUPR:  			14.44	+/- 0.08
+
+
+Texture Detection
+				wrn_baseline
+FPR95:			76.41	+/- 1.14
+AUROC: 			70.40	+/- 0.34
+AUPR:  			31.38	+/- 0.54
+
+
+SVHN Detection
+				wrn_baseline
+FPR95:			52.34	+/- 0.63
+AUROC: 			80.80	+/- 0.35
+AUPR:  			42.79	+/- 0.57
+
+
+Places365 Detection
+				wrn_baseline
+FPR95:			63.58	+/- 1.05
+AUROC: 			76.93	+/- 0.34
+AUPR:  			36.26	+/- 0.67
+
+
+LSUN Detection
+				wrn_baseline
+FPR95:			66.98	+/- 1.47
+AUROC: 			74.15	+/- 0.39
+AUPR:  			31.21	+/- 0.41
+
+
+Held-out ImageNet Classes Detection
+				wrn_baseline
+FPR95:			67.29	+/- 0.87
+AUROC: 			72.79	+/- 0.38
+AUPR:  			29.96	+/- 0.42
+
+
+Mean Test Results
+				wrn_baseline
+FPR95:			66.27
+AUROC: 			64.86
+AUPR:  			27.15

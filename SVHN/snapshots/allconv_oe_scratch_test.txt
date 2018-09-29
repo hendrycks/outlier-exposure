@@ -1,0 +1,81 @@
+Model restored! Epoch: 19
+Error Rate 1.89
+
+Using SVHN as typical data
+
+
+Error Detection
+			allconv_oe_scratch
+FPR95:			62.18
+AUROC:			91.60
+AUPR:			39.05
+
+
+Gaussian Noise (mu = sigma = 0.5) Detection
+				allconv_oe_scratch
+FPR95:			0.02	+/- 0.00
+AUROC: 			99.98	+/- 0.00
+AUPR:  			99.64	+/- 0.01
+
+
+Bernoulli Noise Detection
+				allconv_oe_scratch
+FPR95:			0.03	+/- 0.00
+AUROC: 			99.98	+/- 0.00
+AUPR:  			99.47	+/- 0.00
+
+
+Blob Detection
+				allconv_oe_scratch
+FPR95:			0.01	+/- 0.00
+AUROC: 			99.99	+/- 0.00
+AUPR:  			99.94	+/- 0.00
+
+
+Icons-50 Detection
+				allconv_oe_scratch
+FPR95:			0.03	+/- 0.00
+AUROC: 			99.87	+/- 0.01
+AUPR:  			99.62	+/- 0.03
+
+
+Texture Detection
+				allconv_oe_scratch
+FPR95:			0.03	+/- 0.00
+AUROC: 			99.98	+/- 0.00
+AUPR:  			99.89	+/- 0.00
+
+
+Places365 Detection
+				allconv_oe_scratch
+FPR95:			0.02	+/- 0.00
+AUROC: 			99.99	+/- 0.00
+AUPR:  			99.96	+/- 0.00
+
+
+LSUN Detection
+				allconv_oe_scratch
+FPR95:			0.02	+/- 0.00
+AUROC: 			99.99	+/- 0.00
+AUPR:  			99.96	+/- 0.00
+
+
+CIFAR-10 Detection
+				allconv_oe_scratch
+FPR95:			0.02	+/- 0.00
+AUROC: 			99.99	+/- 0.00
+AUPR:  			99.96	+/- 0.00
+
+
+Street View Characters Detection
+				allconv_oe_scratch
+FPR95:			0.02	+/- 0.00
+AUROC: 			99.99	+/- 0.00
+AUPR:  			99.95	+/- 0.01
+
+
+Mean Test Results
+				allconv_oe_scratch
+FPR95:			0.02
+AUROC: 			99.98
+AUPR:  			99.82

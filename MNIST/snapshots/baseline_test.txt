@@ -1,0 +1,74 @@
+Model restored! Epoch: 9
+Error Rate 0.94
+
+Using MNIST as typical data
+
+
+Error Detection
+			baseline
+FPR95:			6.56
+AUROC:			98.45
+AUPR:			35.47
+
+
+Gaussian Noise (mu = sigma = 0.5) Detection
+				baseline
+FPR95:			0.21	+/- 0.03
+AUROC: 			99.96	+/- 0.00
+AUPR:  			99.81	+/- 0.01
+
+
+Bernoulli Noise Detection
+				baseline
+FPR95:			1.04	+/- 0.08
+AUROC: 			99.81	+/- 0.01
+AUPR:  			99.01	+/- 0.05
+
+
+CIFAR-10 Detection
+				baseline
+FPR95:			0.86	+/- 0.06
+AUROC: 			99.87	+/- 0.01
+AUPR:  			99.34	+/- 0.04
+
+
+Icons-50 Detection
+				baseline
+FPR95:			1.44	+/- 0.08
+AUROC: 			99.74	+/- 0.02
+AUPR:  			98.79	+/- 0.07
+
+
+Fashion-MNIST Detection
+				baseline
+FPR95:			2.96	+/- 0.12
+AUROC: 			99.31	+/- 0.03
+AUPR:  			96.31	+/- 0.15
+
+
+Negative MNIST Detection
+				baseline
+FPR95:			5.20	+/- 0.19
+AUROC: 			98.55	+/- 0.04
+AUPR:  			91.91	+/- 0.16
+
+
+notMNIST Detection
+				baseline
+FPR95:			16.64	+/- 0.71
+AUROC: 			96.04	+/- 0.09
+AUPR:  			84.89	+/- 0.23
+
+
+Omniglot Detection
+				baseline
+FPR95:			14.81	+/- 1.35
+AUROC: 			96.23	+/- 0.17
+AUPR:  			83.85	+/- 0.41
+
+
+Mean Test Results
+				baseline
+FPR95:			5.40
+AUROC: 			98.69
+AUPR:  			94.24
