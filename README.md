@@ -1,6 +1,6 @@
 # Outlier Exposure
 
-This repository contains the essential code for the paper [_Deep Anomaly Detection with Outlier Exposure_](https://openreview.net/pdf?id=HyxCxhRcY7).
+This repository contains the essential code for the paper [_Deep Anomaly Detection with Outlier Exposure_](https://arxiv.org/abs/1812.04606).
 
 Requires Python 3+ and PyTorch 0.4.1+.
 
@@ -9,9 +9,8 @@ Requires Python 3+ and PyTorch 0.4.1+.
 ## Overview
 
 Outlier Exposure (OE) is a method for improving anomaly detection performance in deep learning models. Using an out-of-distribution dataset, we fine-tune a classifier so that the model learns heuristics to distinguish anomalies and in-distribution samples. Crucially, these heuristics generalize to new distributions. This repository contains a subset of the calibration and multiclass classification experiments. Please consult the paper for the full results and method descriptions.
- 
 
-<img align="center" src="oe_table.png" width="750">
+Contained within this repository is code for the multiclass and calibration experiments for SVHN, CIFAR-10, CIFAR-100, and Tiny ImageNet.
 
 ## Citation
 
