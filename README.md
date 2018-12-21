@@ -16,11 +16,11 @@ Contained within this repository is code for the multiclass and calibration expe
 
 If you find this useful in your research, please consider citing:
 
-    @article{hendrycks2018oe,
+    @article{hendrycks2019oe,
       title={Deep Anomaly Detection with Outlier Exposure},
       author={Hendrycks, Dan and Mazeika, Mantas and Dietterich, Thomas},
-      journal={arXiv preprint},
-      year={2018}
+      journal={Proceedings of the International Conference on Learning Representations},
+      year={2019}
     }
 
 ## Outlier Datasets
