@@ -1,6 +1,6 @@
 # Outlier Exposure
 
-This repository contains the essential code for the paper [_Deep Anomaly Detection with Outlier Exposure_](https://arxiv.org/abs/1812.04606).
+This repository contains the essential code for the paper [_Deep Anomaly Detection with Outlier Exposure_](https://arxiv.org/abs/1812.04606) (ICLR 2019).
 
 Requires Python 3+ and PyTorch 0.4.1+.
 
