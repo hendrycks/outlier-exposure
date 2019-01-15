@@ -47,22 +47,25 @@ def soft_f1(confidence, correct):
     return 2 * ((1 - confidence) * wrong).sum()/(1 - confidence + wrong).sum()
 
 
-def tune_temp(logits, labels, grid_search=True, lower=0.7, upper=2.0, grid_step=0.0001):
+def tune_temp(logits, labels, binary_search=True, lower=0.2, upper=5.0, eps=0.0001):
     logits = np.array(logits)
-    
-    if grid_search:
+
+    if binary_search:
         import torch
         import torch.nn.functional as F
 
-        best_loss = float('inf')
-        t = lower
         logits = torch.FloatTensor(logits)
         labels = torch.LongTensor(labels)
-        for temp in np.arange(lower, upper, grid_step):
-            loss = float(F.cross_entropy(logits / temp, labels))
-            if loss < best_loss:
-                best_loss = loss
-                t = temp
+        t_guess = torch.FloatTensor([0.5*(lower + upper)]).requires_grad_()
+
+        while upper - lower > eps:
+            if torch.autograd.grad(F.cross_entropy(logits / t_guess, labels), t_guess)[0] > 0:
+                upper = 0.5 * (lower + upper)
+            else:
+                lower = 0.5 * (lower + upper)
+            t_guess = t_guess * 0 + 0.5 * (lower + upper)
+
+        t = min([lower, 0.5 * (lower + upper), upper], key=lambda x: float(F.cross_entropy(logits / x, labels)))
     else:
         import cvxpy as cx
 
