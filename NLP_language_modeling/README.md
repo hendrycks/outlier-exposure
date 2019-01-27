@@ -20,7 +20,7 @@ python -u train.py --model QRNN --batch_size 20 --clip 0.2 --wdrop 0.1 --nhid 15
 PTB models are trained/tested analogously, but without --character_level when running eval_ood.py.
 
 
-**Models in snapshots folder**
+**Models in snapshots folder (not on github due to space limits)**
 
 PTBC.pt : baseline character level model
 
