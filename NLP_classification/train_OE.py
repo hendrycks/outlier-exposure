@@ -106,33 +106,27 @@ elif args.in_dist_dataset == 'trec':
 
 
 if args.oe_dataset == 'wikitext2':
-    # set up fields
-    TEXT_wtxt = data.Field(pad_first=True, lower=True)
+    TEXT_custom = data.Field(pad_first=True, lower=True)
+    
+    custom_data = data.TabularDataset(path='./.data/wikitext_reformatted/wikitext2_sentences',
+                                      format='csv',
+                                      fields=[('text', TEXT_custom)])
 
-    # make splits for data
-    train_OE, val_OE, test_OE = datasets.WikiText2.splits(TEXT_wtxt)
+    TEXT_custom.build_vocab(train.text, max_size=10000)
+    print('vocab length (including special tokens):', len(TEXT_custom.vocab))
 
-    # build vocab
-    TEXT_wtxt.build_vocab(train.text, max_size=10000)
-    print('vocab length (including special tokens):', len(TEXT_wtxt.vocab))
-
-    # create our own iterator, avoiding the calls to build_vocab in SST.iters
-    train_iter_oe, val_iter_oe, test_iter_oe = data.BPTTIterator.splits(
-        (train_OE, val_OE, test_OE), batch_size=args.batch_size, bptt_len=15, repeat=False)
+    train_iter_oe = data.BucketIterator(custom_data, batch_size=args.batch_size, repeat=False)
 elif args.oe_dataset == 'wikitext103':
-    # set up fields
-    TEXT_wtxt = data.Field(pad_first=True, lower=True)
+    TEXT_custom = data.Field(pad_first=True, lower=True)
 
-    # make splits for data
-    train_OE, val_OE, test_OE = datasets.WikiText103.splits(TEXT_wtxt)
+    custom_data = data.TabularDataset(path='./.data/wikitext_reformatted/wikitext103_sentences',
+                                      format='csv',
+                                      fields=[('text', TEXT_custom)])
 
-    # build vocab
-    TEXT_wtxt.build_vocab(train.text, max_size=10000)
-    print('vocab length (including special tokens):', len(TEXT_wtxt.vocab))
+    TEXT_custom.build_vocab(train.text, max_size=10000)
+    print('vocab length (including special tokens):', len(TEXT_custom.vocab))
 
-    # create our own iterator, avoiding the calls to build_vocab in SST.iters
-    train_iter_oe, val_iter_oe, test_iter_oe = data.BPTTIterator.splits(
-        (train_OE, val_OE, test_OE), batch_size=args.batch_size, bptt_len=15, repeat=False)
+    train_iter_oe = data.BucketIterator(custom_data, batch_size=args.batch_size, repeat=False)
 elif args.oe_dataset == 'gutenberg':
     TEXT_custom = data.Field(pad_first=True, lower=True)
 
