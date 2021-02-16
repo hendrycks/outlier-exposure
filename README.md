@@ -12,6 +12,8 @@ Outlier Exposure (OE) is a method for improving anomaly detection performance in
 
 Contained within this repository is code for the NLP experiments and the multiclass and calibration experiments for SVHN, CIFAR-10, CIFAR-100, and Tiny ImageNet.
 
+[**80 Million Tiny Images is available here (mirror link).**](http://www.archive.org/download/80-million-tiny-images-2-of-2/tiny_images.bin)
+
 ## Citation
 
 If you find this useful in your research, please consider citing:
